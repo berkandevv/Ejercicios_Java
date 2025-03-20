@@ -56,8 +56,7 @@ public class Scramblies {
         // Verificamos que str1 tiene suficientes caracteres para cubrir str2
         for (char caracter : diccionarioStr2.keySet()) {
             // Si en str1 no existe el carácter o no tiene suficientes ocurrencias
-            if (!diccionarioStr1.containsKey(caracter)
-                    || diccionarioStr1.get(caracter) < diccionarioStr2.get(caracter)) {
+            if (!diccionarioStr1.containsKey(caracter) || diccionarioStr1.get(caracter) < diccionarioStr2.get(caracter)) {
                 return false;
             }
         }

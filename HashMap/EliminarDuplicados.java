@@ -21,7 +21,7 @@ public class EliminarDuplicados {
         int[] resultadoFinal = new int[map.size()];
         int index = 0;
 
-        // Extraemos los valores del HashMap y los colocamos en el nuevo array
+        // Extraemos las claves del HashMap y los colocamos en el nuevo array
         for (Integer key : map.keySet()) {
             resultadoFinal[index++] = key;
         }
@@ -30,6 +30,7 @@ public class EliminarDuplicados {
     }
 
     public static void main(String[] args) {
+
         int[] resultado1 = { 1, 1, 2 };
         int[] resultado2 = { 1, 2, 1, 1, 3, 2 };
 

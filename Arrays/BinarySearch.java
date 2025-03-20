@@ -6,17 +6,17 @@
  * valor podría ser insertado.
  */
 
-public class BusquedaBinaria {
+ public class BinarySearch {
 
     // Método de búsqueda binaria
     public static int busquedaBinaria(int[] array, int objetivo) {
 
-        int inicio = 0;
-        int fin = array.length - 1;
+        int low = 0;
+        int high = array.length - 1;
 
-        while (inicio <= fin) {
+        while (low <= high) {
 
-            int mid = (inicio + fin) / 2;
+            int mid = (low + high) / 2;
             int puntoMedio = array[mid];
 
             if (puntoMedio == objetivo) {
@@ -24,14 +24,14 @@ public class BusquedaBinaria {
             }
 
             else if (puntoMedio > objetivo) {
-                fin = mid - 1;
+                high = mid - 1;
 
             } else {
-                inicio = mid + 1;
+                low = mid + 1;
             }
         }
 
-        return inicio; // Devuelve el posible índice, si no se encuentra
+        return low; // Devuelve el posible índice si no se encuentra
     }
 
     public static void main(String[] args) {

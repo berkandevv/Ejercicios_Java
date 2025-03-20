@@ -16,6 +16,7 @@ public class BubbleSort2D {
 
         for (int i = 0; i < totalElementos - 1; i++) {
             for (int j = 0; j < totalElementos - i - 1; j++) {
+
                 int filaActual = j / columnas;
                 int columnaActual = j % columnas;
                 int filaSiguiente = (j + 1) / columnas;

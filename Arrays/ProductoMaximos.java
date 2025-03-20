@@ -3,7 +3,7 @@
  * de enteros dados, donde n es el tamaño especificado.
  */
 
-public class ProductoMaximos {
+ public class ProductoMaximos {
 
     public static long maxProduct(int[] numeros, int sub_size) {
 
@@ -11,11 +11,11 @@ public class ProductoMaximos {
 
             for (int j = i + 1; j < numeros.length; j++) {
 
-                if (numeros[j] < numeros[i]) {
+                if (numeros[i] > numeros[j]) {
 
-                    int temporal = numeros[j];
-                    numeros[j] = numeros[i];
-                    numeros[i] = temporal;
+                    int temporal = numeros[i];
+                    numeros[i] = numeros[j];
+                    numeros[j] = temporal;
                 }
             }
         }
@@ -35,7 +35,6 @@ public class ProductoMaximos {
         int sub_size = 2;
 
         long resultado = maxProduct(miArray, sub_size);
-
-        System.out.println(resultado);
+        System.out.println(resultado); // Se espera 20 => 4 * 5 = 20
     }
 }
